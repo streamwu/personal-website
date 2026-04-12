@@ -1,8 +1,11 @@
 import { motion } from "motion/react";
 import { personalData } from "../data";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, User } from "lucide-react";
+import { useState } from "react";
 
 export default function Hero() {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center pt-20 pb-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -81,13 +84,21 @@ export default function Hero() {
         >
           <div className="relative aspect-[3/4] max-w-[280px] mx-auto lg:ml-auto">
             <div className="absolute inset-0 border border-brand-accent/30 rounded-2xl translate-x-3 translate-y-3 -z-10" />
-            <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border border-black/5">
-              <img
-                src={personalData.profileImage}
-                alt={personalData.name}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-all duration-700"
-              />
+            <div className="w-full h-full rounded-2xl overflow-hidden shadow-xl border border-black/5 bg-brand-accent/5 flex items-center justify-center">
+              {!imageError ? (
+                <img
+                  src={personalData.profileImage}
+                  alt={personalData.name}
+                  referrerPolicy="no-referrer"
+                  onError={() => setImageError(true)}
+                  className="w-full h-full object-cover transition-all duration-700"
+                />
+              ) : (
+                <div className="flex flex-col items-center gap-4 text-brand-accent/40">
+                  <User size={64} strokeWidth={1} />
+                  <span className="text-[10px] uppercase tracking-widest font-mono">Profile Image</span>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>
