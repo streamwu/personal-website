@@ -26,7 +26,7 @@ export const personalData = {
   name: "Xihui Wu",
   profileImage: "https://raw.githubusercontent.com/streamwu/personal-website/main/src/profile_pic.png",
   title: "AI Developer & Independent Philosophy Scholar",
-  about: "Bridging the gap between computational intelligence and philosophical inquiry.\n\nAfter obtaining her Master of Science degree in Computer Science at the University of Chicago, Xihui Wu worked at major technology companies in Silicon Valley, including Amazon, Microsoft, and Google. Her journey with AI began with recommender systems in 2017; she later participated in the development of BERT and GPT-2 in 2019 and has witnessed the rapid expansion of LLMs since then. In 2022, she enrolled in the Master of Art in Philosophy program at San Jose State University, graduating at the end of 2025. She is now an independent philosophy scholar focusing on the philosophy of mind, science, and technology.",
+  about: "Bridging the gap between computational intelligence and philosophical inquiry.\n\nAfter obtaining her Master of Science degree in Computer Science at the University of Chicago, Xihui Wu worked at major technology companies in Silicon Valley, including Amazon, Microsoft, and Google. Her journey with AI began with recommender systems in 2017; she later participated in the development of BERT and GPT-2 in 2019 and has witnessed the rapid expansion of LLMs since then. In 2022, she enrolled in the Master of Art in Philosophy program at San Jose State University, graduating at the end of 2025. In her part time, she is now an independent philosophy scholar focusing on the philosophy of mind, science, and technology.",
   sections: {
     tech: {
       title: "High Tech & AI",
